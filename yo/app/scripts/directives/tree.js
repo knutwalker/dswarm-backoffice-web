@@ -87,7 +87,7 @@ angular.module('dmpApp')
         data: '=',
         onLeafClick: '&'
       },
-      replace: true,
+      replace: false,
       templateUrl: 'views/directives/tree.html',
       controller: 'TreeCtrl',
       compile: function (tElement, tAttrs) {
