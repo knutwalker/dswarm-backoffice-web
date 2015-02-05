@@ -5,6 +5,7 @@ var SERVER_PORT = 9999;
 var OPEN_TO_THE_WORLD = process.env.DMP_OPEN_TO_THE_WORLD || false;
 var WORLD_IP = process.env.DMP_WORLD_IP || '0.0.0.0';
 var BACKEND_URL = process.env.DMP_BACKEND_URL || 'http://127.0.0.1:8087/dmp/';
+var DIST_DIR = process.env.DMP_DIST_DIR || 'dist'
 
 // # Globbing
 // for performance reasons we're only matching one level down:
@@ -32,7 +33,7 @@ module.exports = function(grunt) {
             // configurable paths
             app: require('./bower.json').appPath || 'app',
             bower: require('bower-config').read('').directory || 'app/bower_components',
-            dist: 'dist',
+            dist: DIST_DIR,
             target: 'target',
             test: 'test'
         },
